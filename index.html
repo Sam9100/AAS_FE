@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pengguna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login Akun</h1>
+        <form id="login-form">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" placeholder="contoh@email.com" required>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" placeholder="Masukkan password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <div class="navigation-link">
+            Belum punya akun? <a href="register.html">Daftar di sini</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Selamat Datang! 🎉</h1>
+        <p style="font-size: 1.2rem;">Anda telah berhasil login sebagai <b id="user-name"></b>.</p>
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userName = localStorage.getItem('userName');
+
+            if (!userName) {
+                window.location.href = 'index.html'; // Arahkan ke index.html jika belum login
+                return;
+            }
+
+            document.getElementById('user-name').textContent = userName;
+
+            const logoutButton = document.getElementById('logout-btn');
+            logoutButton.addEventListener('click', function() {
+                localStorage.removeItem('userName');
+                window.location.href = 'index.html'; // Arahkan ke index.html setelah logout
+            });
+        });
+    </script>
+</body>
+</html>
